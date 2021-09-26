@@ -1,21 +1,27 @@
 <template>
-  
+  <div id="nav">
+    <!-- <router-link to="/">Home</router-link> 
+    <router-link to="/about">About</router-link> -->
+    <nav-bar></nav-bar>
+  </div>
+  <router-view />
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
+import NavBar from '@/components/navBar/NavBar.vue'
 
-export default {
-  name: 'App',
-}
+export default defineComponent({
+  components: {
+    NavBar
+  },
+  setup() {
+    return {}
+  },
+})
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+<style lang="less">
+
 </style>

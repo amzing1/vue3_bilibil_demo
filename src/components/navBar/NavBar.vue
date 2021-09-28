@@ -78,6 +78,7 @@ export default defineComponent({
     right: 0;
     justify-content: space-around;
     align-items: center;
+    z-index: 100;
 }
 
 .navbarItem {

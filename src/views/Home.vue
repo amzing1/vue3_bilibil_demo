@@ -3,10 +3,10 @@
     <Head />
     <Nav />
     <div class="main">
-      <Carousel />
+      <component :is="currentView">
+      </component>
     </div>
   </div>
-  
 </template>
 
 <style lang="less" scoped>
@@ -14,24 +14,54 @@
   box-sizing: border-box;
   width: 95%;
   margin: 5px 2.5%;
+  padding-bottom: 60px;
 }
 </style>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { computed, defineComponent } from 'vue';
 import Head from "@/components/home/head/Head.vue"
 import Nav from "@/components/home/head/Nav.vue"
-import Carousel from "@/components/home/carousel/Carousel.vue"
+import Tuijian from "@/components/home/tuijian/Tuijian.vue"
+import Zhibo from "@/components/home/zhibo/Zhibo.vue"
+import { useStore } from 'vuex';
+
 
 export default defineComponent({
   name: 'Home',
   components: {
     Head,
     Nav,
-    Carousel
+    Tuijian,
+    Zhibo,
   },
   setup() {
-    return {}
+
+    const store = useStore();
+
+    let currentView = computed(() => {
+      console.log('111');
+      switch(store.state.currentIndex) {
+        case 0:
+          return "Zhibo";
+        case 1:
+          return "Tuijian";
+        case 2:
+          return "remen";
+        case 3:
+          return "zhuifan";
+        case 4:
+          return "yingshi";
+        case 5:
+          return "jiandang";
+        default:
+          return "Tuijian";
+      }
+    })
+
+    return {
+      currentView,
+    }
   }
 });
 </script>

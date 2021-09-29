@@ -10,17 +10,9 @@
         </span>
     </div>
     <div class="attentionList">
-        <div class="attentionItem">
-            <div class="img"></div>
-            <span class="name">央视新闻</span>
-        </div>
-        <div class="attentionItem">
-            <div class="img"></div>
-            <span class="name">央视新闻</span>
-        </div>
-        <div class="attentionItem">
-            <div class="img"></div>
-            <span class="name">央视新闻</span>
+        <div class="attentionItem" v-for="item in zhiboList" :key=item.id>
+            <img :src="item.imgUrl" class="img">
+            <span class="name">{{item.name}}</span>
         </div>
     </div>
 </div>
@@ -34,6 +26,7 @@
     position: relative;
     padding: 10px 5px;
     background-color: #fff;
+    margin-bottom: 10px;
 
     #text1 {
         font-weight: 700;
@@ -65,6 +58,7 @@
             text-align: center;
 
             .img {
+                display: block;
                 width: 50px;
                 height: 50px;
                 margin: 0 auto;
@@ -84,7 +78,7 @@
 </style>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, reactive } from 'vue'
 
 import { ChevronRight } from '@vicons/carbon'
 import { Icon } from '@vicons/utils'
@@ -95,7 +89,27 @@ export default defineComponent({
         Icon
     },
     setup() {
-        return {}
+
+        let zhiboList = reactive([
+            {
+                imgUrl: require('@/assets/images/z_head1.png'),
+                name: '央视新闻',
+                id: 1234
+            },
+            {
+                imgUrl: require('@/assets/images/z_head2.png'),
+                name: '无语子',
+                id: 12344
+            },
+            {
+                imgUrl: require('@/assets/images/z_head3.png'),
+                name: '绝绝子',
+                id: 12345
+            }
+        ])
+        return {
+            zhiboList
+        }
     },
 })
 </script>

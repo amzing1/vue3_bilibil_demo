@@ -6,6 +6,7 @@
         </Carousel>
         <TypeList />
         <MyAttention />
+        <Content />
     </div>
 </template>
 
@@ -20,13 +21,15 @@ import { defineComponent } from 'vue'
 import Carousel from '../carousel/Carousel.vue'
 import TypeList from './TypeList.vue'
 import MyAttention from './MyAttention.vue'
+import Content from './Content.vue'
 
 export default defineComponent({
     name: 'Zhibo',
     components: {
         Carousel,
         TypeList,
-        MyAttention
+        MyAttention,
+        Content
     },
     setup() {
         return {}

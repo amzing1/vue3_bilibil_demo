@@ -14,11 +14,12 @@
     padding: 5px 0;
 
     .img {
-        width: 100%;
+        width: 80%;
         vertical-align: middle;
     }
 
     .title {
+        display: block;
         font-size: 12px;
     }
 }

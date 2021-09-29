@@ -5,6 +5,7 @@
             <img class="car-img" src="@/assets/images/zhibo2.jpg" />
         </Carousel>
         <TypeList />
+        <MyAttention />
     </div>
 </template>
 
@@ -18,12 +19,14 @@
 import { defineComponent } from 'vue'
 import Carousel from '../carousel/Carousel.vue'
 import TypeList from './TypeList.vue'
+import MyAttention from './MyAttention.vue'
 
 export default defineComponent({
     name: 'Zhibo',
     components: {
         Carousel,
-        TypeList
+        TypeList,
+        MyAttention
     },
     setup() {
         return {}

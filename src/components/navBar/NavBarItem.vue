@@ -1,6 +1,6 @@
 <template>
     <div class="navbarItem" @click="toThisView" >
-        <slot name="icon"></slot><br>
+        <slot name="icon"></slot>
         <slot></slot>
     </div>
 </template>
@@ -18,7 +18,11 @@ export default defineComponent({
     setup(props) {
         const router = useRouter();
 
-        function toThisView(): void {
+        function toThisView(event: MouseEvent): void {
+            const oldRouteElem = document.querySelector('.currentRoute') as HTMLElement;
+            oldRouteElem.classList.remove('currentRoute');
+            const curRouteElem = (event.currentTarget as HTMLElement).parentNode as HTMLElement;
+            curRouteElem.classList.add('currentRoute');
             router.push({
                 name: props.path
             })

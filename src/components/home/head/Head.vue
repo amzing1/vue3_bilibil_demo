@@ -14,7 +14,7 @@
 .homeHead {
     width: 100%;
     height: 50px;
-    background-color:skyblue;
+    background-color:#fff;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -24,7 +24,7 @@
     .search {
         width: 200px;
         height: 30px;
-        background-color: #fff;
+        background-color: #ddd;
         border-radius: 20px;
 
         .searchIcon {

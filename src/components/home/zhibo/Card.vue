@@ -98,7 +98,6 @@ export default defineComponent({
     components: {
         Icon,
         Close,
-
     },
     setup() {
         return {}

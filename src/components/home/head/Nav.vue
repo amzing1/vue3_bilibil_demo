@@ -17,7 +17,7 @@
     position: sticky;
     top: 0px;
     height: 33px;
-    background-color: pink;
+    background-color: #fff;
     z-index: 100;
 
     .nav {
@@ -34,7 +34,7 @@
     .cur {
         width: 2em;
         height: 3px;
-        background-color: green;
+        background-color: deeppink;
         position: absolute;
     }
 }

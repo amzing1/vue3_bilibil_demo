@@ -1,9 +1,9 @@
 <template>
     <div class="navbar">
-        <div class="navbarItem">
+        <div class="navbarItem currentRoute">
             <nav-bar-item :path="'Home'">
                 <template v-slot:icon>
-                    <Icon>
+                    <Icon class="icon-big">
                         <Home />
                     </Icon>
                 </template>
@@ -14,8 +14,8 @@
         <div class="navbarItem">
             <nav-bar-item :path="'DynamicState'">
                 <template v-slot:icon>
-                    <Icon>
-                        <Home />
+                    <Icon class="icon-big">
+                        <Windmill />
                     </Icon>
                 </template>
                 <span class="title">动态</span>
@@ -27,8 +27,8 @@
         <div class="navbarItem">
             <nav-bar-item :path="'Shopping'">
                 <template v-slot:icon>
-                    <Icon>
-                        <Home />
+                    <Icon class="icon-big">
+                        <ShoppingBag />
                     </Icon>
                 </template>
                 <span class="title">会员购</span>
@@ -38,8 +38,8 @@
         <div class="navbarItem">
             <nav-bar-item :path="'Mine'">
                 <template v-slot:icon>
-                    <Icon>
-                        <Home />
+                    <Icon class="icon-big">
+                        <BeeBat />
                     </Icon>
                 </template>
                 <span class="title">我的</span>
@@ -51,14 +51,18 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import NavBarItem from './NavBarItem.vue'
-import { Home } from '@vicons/carbon'
+import { Home, ShoppingBag, BeeBat } from '@vicons/carbon'
 import { Icon } from '@vicons/utils'
+import { Windmill } from '@vicons/tabler'
 
 export default defineComponent({
     components: {
         NavBarItem,
         Home,
-        Icon
+        Icon,
+        Windmill,
+        ShoppingBag,
+        BeeBat
     },
     setup() {
         return {}
@@ -70,7 +74,8 @@ export default defineComponent({
 .navbar {
     width: 100%;
     height: 6%;
-    background-color: skyblue;
+    background-color: #fff;
+    color: #666;
     display: flex;
     position: fixed;
     bottom: 0;
@@ -83,8 +88,18 @@ export default defineComponent({
 
 .navbarItem {
     text-align: center;
+    line-height: 1.3;
+
+    .icon-big {
+        font-size: 20px;
+    }
+}
+
+.currentRoute {
+    color: deeppink;
 }
 .title {
+    display: block;
     font-size: 12px;
 }
 

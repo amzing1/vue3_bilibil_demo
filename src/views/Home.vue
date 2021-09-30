@@ -24,6 +24,8 @@ import Head from "@/components/home/head/Head.vue"
 import Nav from "@/components/home/head/Nav.vue"
 import Tuijian from "@/components/home/tuijian/Tuijian.vue"
 import Zhibo from "@/components/home/zhibo/Zhibo.vue"
+import Remen from "@/components/home/remen/Remen.vue"
+import Zhuifan from "@/components/home/zhuifan/Zhuifan.vue"
 import { useStore } from 'vuex';
 
 
@@ -34,6 +36,8 @@ export default defineComponent({
     Nav,
     Tuijian,
     Zhibo,
+    Remen,
+    Zhuifan
   },
   setup() {
 

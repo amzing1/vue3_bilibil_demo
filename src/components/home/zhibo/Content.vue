@@ -8,6 +8,11 @@
         </div>
         <div class="zhiboList">
             <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
         </div>
     </div>
 </template>
@@ -55,7 +60,8 @@ export default defineComponent({
     .zhiboList {
         width: 100%;
         display: flex;
-        
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 }
 </style>

@@ -1,0 +1,25 @@
+@import "../../abstracts/mixins.scss";
+.common-bar {
+  @include content-bar;
+  @include main-bar;
+
+  .gray-button {
+    margin-left: .8rem;
+  }
+
+  .common-bar-content {
+    display: flex;
+    .cards-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-content: space-between;
+      flex-wrap: wrap;
+      width: 83.5%;
+    }
+  }
+
+  .right {
+    width: 16.5%;
+  }
+  
+}

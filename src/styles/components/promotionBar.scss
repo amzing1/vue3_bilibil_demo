@@ -1,0 +1,11 @@
+@import "../abstracts/mixins.scss";
+.promotion-bar {
+  @include content-bar;
+  @include main-bar;
+
+  .cards-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}

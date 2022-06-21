@@ -1,0 +1,83 @@
+@import '../../abstracts/variables.scss';
+@import '../../abstracts/mixins.scss';
+.ranking-list {
+  border: 1px solid $color-border;
+  border-radius: 4px;
+  margin-left: 1.5rem;
+  position: relative;
+  &-item {
+    display: flex;
+    align-items: center;
+    height: 6.0rem;
+    position: relative;
+    .ranking-number {
+      font-weight: bold;
+      color: $color-text-fade;
+      margin-left: .6rem;
+    }
+    .item-head-image {
+      margin: 0 1rem;
+      width: 3.6rem;
+      height: 3.6rem;
+      border-radius: 50%;
+    }
+    .right {
+      flex: 1;
+      .item-msg {
+        width: 100%;
+        .item-name {
+          @include link-hover
+        }
+        .item-description {
+          @include single-line;
+          width: 13.8rem;
+          max-width: 13.8rem;
+          color: $color-text-fade;
+        }
+      }
+      .item-watch-count {
+        position: absolute;
+        right: .6rem;
+        bottom: 1rem;
+        color: $color-text-fade;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      .item-name {
+        color: $color-text-hover;
+      }
+    }
+    &:nth-child(2n) {
+      background-color: $color-gray;
+    }
+    &:first-child {
+      .ranking-number {
+        color: $color-first;
+      }
+    }
+    &:nth-child(2) {
+      .ranking-number {
+        color: $color-second;
+      }
+    }
+    &:nth-child(3) {
+      .ranking-number {
+        color: $color-third;
+      }
+    }
+  }
+
+  .head {
+    position: absolute;
+    top: -4.3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-size: 2.4rem;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import './variables.scss';
+@mixin content-bar {
+  padding: 0 9.6rem;
+}
+@mixin main-bar {
+  margin-bottom: 2.4rem;
+}
+
+@mixin single-line {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin many-lines($n) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $n;
+  -webkit-box-orient: vertical;
+}
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: block;
+    height: 100%;
+    clear: both;
+  }
+}
+
+@mixin link-hover {
+  &:hover {
+    cursor: pointer;
+    color: $color-text-hover;
+  }
+}

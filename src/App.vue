@@ -1,27 +1,22 @@
-<template>
-  <div id="nav">
-    <!-- <router-link to="/">Home</router-link> 
-    <router-link to="/about">About</router-link> -->
-    <nav-bar></nav-bar>
-  </div>
-  <router-view />
-</template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-import NavBar from '@/components/navBar/NavBar.vue'
-
-export default defineComponent({
-  components: {
-    NavBar
-  },
-  setup() {
-    return {}
-  },
-})
+<script setup lang="ts">
+// This starter template is using Vue 3 <script setup> SFCs
+// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import TopNavigation from './components/common/TopNavigation.vue'
+import VideoTypeBar from './components/home/VideoTypeBar.vue';
+import VideoRecommand from './components/home/VideoRecommand.vue';
+import PromotionVue from './components/home/PromotionBar.vue';
+import Advertisement from './components/common/Advertisement.vue';
+import ZhiboBar from './components/home/ZhiboBar.vue';
+import CartooBar from './components/home/CartooBar.vue';
 </script>
 
+<template>
+  <TopNavigation />
+  <VideoTypeBar />
+  <VideoRecommand />
+  <PromotionVue />
+  <Advertisement />
+  <ZhiboBar />
+  <CartooBar />
+</template>
 
-<style lang="less">
-
-</style>

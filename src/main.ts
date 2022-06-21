@@ -1,7 +1,7 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-import './assets/css/base.less'
+import { createApp } from "vue";
+import App from "./App.vue";
+import ViewUIPlus from "view-ui-plus";
+import "./styles/main.scss";
+import "view-ui-plus/dist/styles/viewuiplus.css";
 
-createApp(App).use(store).use(router).mount('#app')
+createApp(App).use(ViewUIPlus).mount("#app");

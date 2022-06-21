@@ -1,0 +1,60 @@
+@import "../abstracts/mixins.scss";
+.video-type-bar {
+  @include content-bar;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12rem;
+
+  .bar-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .bar-left-item {
+      width: 4.6rem;
+      margin-right: 2.4rem;
+      text-align: center;
+      .item-image {
+        width: 4.6rem;
+        height: 4.6rem;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .bar-mid {
+    width: 122.3rem;
+    height: 7.4rem;
+    padding-right: 3rem;
+    .bar-mid-content {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 1rem;
+      grid-auto-flow: column;
+      margin-right: 3rem;
+    }
+  }
+
+  .bar-right {
+    width: 25.8rem;
+    height: 7.4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 1rem;
+    line-height: 3.2rem;
+    padding-left: 3rem;
+    border-left: 1px solid $color-border;
+
+    span {
+      cursor: pointer;
+      &:hover {
+        color: $color-text-hover;
+      }
+    }
+  }
+
+  
+
+}

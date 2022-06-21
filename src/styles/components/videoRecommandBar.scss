@@ -1,0 +1,19 @@
+@import "../abstracts/mixins.scss";
+.video-recommand-bar {
+  @include content-bar;
+  @include main-bar;
+  display: flex;
+  justify-content: space-between;
+  min-height: 47.8rem;
+
+  .right {
+    flex: 1;
+    margin-left: 1.4rem;
+    min-width: 113.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    position: relative;
+  }
+}

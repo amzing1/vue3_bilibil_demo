@@ -1,0 +1,44 @@
+.hover-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+  &-item-wrapper {
+    display: none;
+    z-index: 10000000;
+    position: absolute;
+    width: 110%;
+    height: 10rem;
+    top: -10rem;
+    left: -5%;
+    .hover-card-item {
+      position: relative;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: rgba(0,0,0,.2)  0 1px 5px 0px;
+      border-radius: 1rem;
+      padding: 1rem;
+      pointer-events: none;
+      .cover-image {
+        width: 30%;
+        object-fit: contain;
+      }
+      .right {
+        width: 70%;
+        padding: 0 1rem;
+      }
+    }
+  }
+  &:hover {
+    .hover-card-item-wrapper {
+      display: block;
+    }
+  }
+  
+
+ 
+}

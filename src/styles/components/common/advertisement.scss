@@ -1,0 +1,11 @@
+@import '../../abstracts/mixins.scss';
+.advertisement {
+  @include content-bar;
+  @include main-bar;
+  height: 14.2rem;
+  cursor: pointer;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

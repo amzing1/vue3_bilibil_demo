@@ -1,0 +1,68 @@
+@import '../../abstracts/variables.scss';
+@import '../../abstracts/mixins.scss';
+.cartoo-ranking-list {
+  border: 1px solid $color-border;
+  border-radius: 4px;
+  margin-left: 1.5rem;
+  position: relative;
+  &-item {
+    height: 4.8rem;
+    .list-item-wrapper {
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .ranking-number {
+      font-weight: bold;
+      color: $color-text-fade;
+      margin-left: .6rem;
+    }
+    .ranking-name {
+      margin-left: 1rem;
+    }
+    .video-image {
+      width: 9rem;
+      height: 5.6rem;
+      margin-left: 1rem;
+    }
+    &:hover {
+      cursor: pointer;
+      .ranking-name {
+        color: $color-text-hover;
+      }
+    }
+    &:nth-child(2n) {
+      background-color: $color-gray;
+    }
+    &:first-child {
+      height: 8.6rem;
+      .ranking-number {
+        color: $color-first;
+      }
+    }
+    &:nth-child(2) {
+      .ranking-number {
+        color: $color-second;
+      }
+    }
+    &:nth-child(3) {
+      .ranking-number {
+        color: $color-third;
+      }
+    }
+  }
+
+  .head {
+    position: absolute;
+    top: -4.3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-size: 2.4rem;
+    }
+  }
+}

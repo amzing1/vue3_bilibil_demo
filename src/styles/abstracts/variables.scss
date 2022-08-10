@@ -2,6 +2,7 @@ $color-white: #fff;
 $color-pink: #fb7299;
 $color-gray: #f6f7f8;
 $color-deep-gray: rgb(227, 229, 231);
+$color-blue: #00aeec;
 
 $color-first: #ff473d;
 $color-second: #ff6a29;
@@ -9,7 +10,7 @@ $color-third: #ff9214;
 
 $color-text: #18191c;
 $color-text-fade: #9499a0;
-$color-text-hover: #00aeec;
+$color-text-hover: $color-blue;
 
 $color-bg-search: #e6eaea;
 $color-bg-input: #dfe1e2;
@@ -21,3 +22,5 @@ $size-text-normal: 14px;
 $padding-small: 2.4rem;
 $padding-big: 5.6rem;
 $padding-text-small: 0.8rem;
+
+$box-shadow: rgba(0,0,0,.2)  0 1px 5px 0px;

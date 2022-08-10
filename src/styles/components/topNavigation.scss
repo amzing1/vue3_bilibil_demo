@@ -118,5 +118,23 @@
       line-height: 3.4rem;
       text-align: center;
     }
+
+    &-right {
+      .login {
+        background-color: $color-blue;
+        color: $color-white;
+      }
+    }
+  }
+}
+.login-dropdown {
+  width: 36rem !important;
+  max-height: 300px !important;
+  .title {
+    margin: .5rem 0;
+  }
+  .ivu-dropdown-item:hover {
+    cursor: default;
+    background-color: inherit;
   }
 }

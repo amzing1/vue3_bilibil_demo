@@ -1,5 +1,7 @@
 @import './variables.scss';
 @mixin content-bar {
+  max-width: 192rem;
+  margin: 0 auto;
   padding: 0 9.6rem;
 }
 @mixin main-bar {

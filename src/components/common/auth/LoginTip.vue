@@ -9,13 +9,16 @@
       <span><Icon type="ios-baseball" /> 发表弹幕/评论</span>
       <span><Icon type="ios-baseball" /> 热门番剧影视看不停</span>
     </p>
-    <Button class="login-btn" type="primary">立即登录</Button>
+    <Button class="login-btn" type="primary" @click="showLoginModal = true">立即登录</Button>
     <p v-if="showSignup" class="signup">首次使用？<span class="blue">点我注册</span></p>
     <Icon type="ios-close" class="close" size="36" @click="closeLoginTip" v-if="showClose" />
   </div>
+  <LoginModal :show-modal="showLoginModal" @close-modal = "closeModal" />
 </template>
 
 <script setup lang="ts">import { Ref, ref } from '@vue/reactivity';
+
+import LoginModal from './LoginModal.vue';
 
 defineProps<{
   showSignup: boolean,
@@ -23,6 +26,7 @@ defineProps<{
 }>();
 
 const self: Ref<null | HTMLElement> = ref(null);
+const showLoginModal = ref(false);
 
 function closeLoginTip() {
   const element = self.value;
@@ -30,6 +34,10 @@ function closeLoginTip() {
     return;
   }
   (element.parentNode as HTMLElement).style.display = 'none';
+}
+
+function closeModal() {
+  showLoginModal.value = false;
 }
 </script>
 
